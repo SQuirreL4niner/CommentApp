@@ -50,7 +50,10 @@ namespace CommentApp
             app.UseHttpsRedirection();
             
             //Add either React files or build config here
-            //app.UseReact(config => )
+            app.UseReact(config =>
+            {
+                config.AddScript("~/js/tutorial.jsx");
+            });
             app.UseStaticFiles();
 
             app.UseRouting();
